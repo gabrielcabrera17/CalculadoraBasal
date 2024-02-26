@@ -64,11 +64,13 @@ button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	transition: transform 20ms ease-in;
+    margin: 20px;
 }
 
 button:active {
 	transform: scale(0.95);
 }
+
 
 #error{
     color: red;
@@ -76,10 +78,18 @@ button:active {
     display: none;
 }
 
-.resultado{
-    color: #0A81D1;
+#flu,#man{
+    color: #d10aa3;
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 5px;
     display: none;
+}
+#flun {
+    /* Agrega aquí tus estilos personalizados */
+    color: #d10aa3;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+    /* Otros estilos... */
 }
