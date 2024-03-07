@@ -1,53 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Bitter&family=Kode+Mono:wght@400..700&family=Nerko+One&display=swap');
 
-body{
-    background: #f6f5f7; 
+body {
+    background: #f6f5f7;
     font-family: 'Montserrat', sans-serif;
     color: #3E363F;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://st.depositphotos.com/1011643/1490/i/450/depositphotos_14901623-stock-photo-two-female-young-nurses-having.jpg'); 
+    background-size: cover;
 }
 
-#contenedor{
-    width: 900px;
+#contenedor {
+    width: 80%;
+    max-width: 1200px;
     height: 500px;
-    text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 32% 32% 32% 32%/ 100% 100% 0% 0%;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    margin-top: 50px;
 }
 
-#calculadora{
+#calculadora,
+#detalle {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#calculadora {
     background: white;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
-    height: 100%;
-    float: left;
 }
 
-#detalle{
+#detalle {
     background: #b900ce;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
-    height: 100%;
-    float: left;
     color: #f6f5f7;
 }
 
-.contenido{
-    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
+.contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 40px;
 }
 
 input {
-	width: 70%;
+    width: 70%;
     padding: 12px 15px;
     border: none;
     background-color: #eee;
@@ -55,24 +59,24 @@ input {
 
 button {
     font-size: 15px;
-	font-weight: bold;
-	padding: 12px 45px;
-	border-radius: 30px;
-	background-color: #a413cc;
-	border: 1px solid #a809a6;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: transform 20ms ease-in;
+    font-weight: bold;
+    padding: 12px 45px;
+    border-radius: 50px;
+    background-color: #771193;
+    border: 1px solid #a809a6;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease-in;
     margin: 20px;
+    cursor: pointer;
 }
 
 button:active {
-	transform: scale(0.95);
+    transform: scale(0.95);
 }
 
-
-#error{
+#error {
     color: red;
     font-weight: bold;
     display: none;

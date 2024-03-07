@@ -5,6 +5,7 @@ const ERROR = document.getElementById('error');
 const FLU = document.getElementById('flu');
 const MAN = document.getElementById('man');
 const FLUJO = document.getElementById('flun');
+const RECARGAR = document.getElementById("reload");
 
 
 CALCULAR.addEventListener('click', ()=>{
@@ -28,8 +29,8 @@ CALCULAR.addEventListener('click', ()=>{
             volumen_diario = DATO * 100;
         } 
         else if(DATO > 30){
-            superfice_corporal = (( DATO*4 )+7)/( DATO+90 )
-            volumen_diario = superfice_corporal * 2000 
+            superfice_corporal = (( DATO*4 )+7)/( DATO+90 );
+            volumen_diario = superfice_corporal * 1500;
           
         }
         volumen_diario = Number(volumen_diario.toFixed(0));
@@ -49,13 +50,19 @@ CALCULAR.addEventListener('click', ()=>{
         MAN.innerHTML = 'm+m/2: ' + mantenimiento + ' cc/hr';
         FLU.style.display = 'block';
         MAN.style.display = 'block';
+        RECARGAR.style.display = 'none';
         console.log(flujo);
 
     } else {
         ERROR.style.display = 'block';
         FLU.style.display = 'none';
         MAN.style.display = 'none';
+        RECARGAR.style.display = 'block';
     }
     
 })
+RECARGAR.addEventListener("click",reload);
+function reload(){
+   location.reload();
+}
 
